@@ -679,19 +679,24 @@ button:focus {
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: space-between; */
   margin-left: -30px;
 }
 
 .footer-socials {
-  flex-basis: calc((100% - 30px * 2) / 4);
+  flex-basis: calc((50% - 45px) / 2);
   margin-left: 30px;
-  margin-top: 12px;
+}
+
+.footer-socials:last-child {
+  flex-basis: calc(50% -15px);
 }
 
 .footer-socials-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  margin-top: 12px;
   text-transform: uppercase;
   color: var(--dark-bg-text-color);
 }
