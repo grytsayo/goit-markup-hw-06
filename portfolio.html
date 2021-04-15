@@ -218,8 +218,8 @@
         </div>
       </section>
     </main>
-    <!--Footer-->
-    <footer class="footer">
+     <!--Footer-->
+     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-socials">
@@ -276,19 +276,21 @@
 
           <div class="footer-socials signup">
             <h2 class="footer-socials-title">Подпишитесь на рассылку</h2>
-            <form class="form" name="signup_form" autocomplete="on" novalidate>
-              <label>
-                <input class="input-form" type="email" name="email" placeholder="E-mail" required/>
-              </label>                
+            <form class="form" name="signup_form" autocomplete="off">
+                <input 
+                class="input-form"
+                type="email" 
+                name="email" 
+                required
+                placeholder="E-mail" 
+                />
               <button class="subscribe-button" type="submit">
-                <span>
-                  <p class="subscribe">
+                <p class="subscribe">
                   Подписаться
-                   <svg class="icon">
-                     <use href="./img2/icons.svg#icon-send"></use>
-                   </svg>
-                  </p>
-                </span>
+                  <svg class="icon">
+                    <use href="./img2/icons.svg#icon-send"></use>
+                  </svg>
+                </p>
               </button>
             </form>
           </div>
