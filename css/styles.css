@@ -807,18 +807,179 @@ letter-spacing: 0.06em;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
-  padding: 40px;
-  background: #FFFFFF;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(1);
+width: 528px;
+height: 581px;
+padding: 40px;
+text-align: center;
+background: var(--dark-bg-text-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 transform: translateX(0, -100%) scale(0.2);
 transition: transform var(--transition-duration) ease-in-out 300ms;
+}
+
+.form-section {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+margin-bottom: 30px;
+color:var(--title-color);
+}
+
+/* Subscription form */
+  
+.form-field,
+.form-textarea {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  fill: #000000;
+  transition: fill var(--transition-duration) var(--timing-function);
+ }
+  
+  
+.field-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform:translateY(-16px);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color:var(--main-text-color);
+}
+  
+  
+.field {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: var(--transition-duration) var(--timing-function);
+}
+  
+.field:nth-child(-n + 3) {
+  margin-bottom: 28px;
+}
+  
+.field:focus + .form-icon {
+fill: var(--accent-color);
+transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.field:focus {
+outline-color: var(--accent-color);
+transition: outline-color var(--transition-duration) var(--timing-function);
+}
+
+.form-textarea {
+  margin-bottom: 20px;
+}
+
+.textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 12px 16px;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  transition: outline-color var(--transition-duration) var(--timing-function);
+}
+
+.textarea:focus {
+  outline-color: var(--accent-color);
+  transition: outline-color var(--transition-duration) var(--timing-function);
+  }
+  
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.agreement-check {
+  position: absolute;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.agreement-check:checked + .span-icon {
+border-color: var(--accent-color);
+background-color: var(--accent-color);
+background-image:url('./img2/antenna.svg');
+background-size: contain;
+background-origin: border-box;
+
+}
+  
+.agreement-link {
+  color:#2196F3 ;
+}
+
+.span-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8.38px;
+  border: solid 2px var(--title-color);
+  border-radius: 2px;
+  }
+
+  .span-link {
+    margin-left: 8.38px;
+  }
+
+/* .checkbox-square {
+  margin-left: -8.38px;
+  fill: var(--title-color);
+} */
+
+.submit {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+   color: var(--dark-bg-text-color);
+  background-color: var(--accent-color);
+  padding: 10px 55px;
+  margin-top: 30px;
+   border: var(--accent-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+}
+  
+.submit:hover,
+.submit:focus {
+  background-color: #188ce8;
 }
 
 .close-button {
@@ -831,7 +992,13 @@ transition: transform var(--transition-duration) ease-in-out 300ms;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--dark-bg-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.close-button:hover {
+fill: var(--accent-color);
+transition: fill var(--transition-duration) var(--timing-function);
 }

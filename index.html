@@ -422,6 +422,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-button" data-modal-close>
@@ -429,8 +431,60 @@
             <use href="./img2/symbol-defs.svg#icon-close-black"></use>
           </svg>
         </button>
+
+        <!-- Fofm -->
+        
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+          <form class="form-section" autocomplete="off">
+           <div class="form-field" >
+             <label for="name" class="field-title"> Имя</label>
+             <input type="name" id="name" name="name" 
+              class="field">
+             <svg class="form-icon" width="12px" height="12px">
+              <use  href="./img2/icons.svg#icon-body"></use>
+             </svg>
+           </div>
+  
+           <div class="form-field">
+              <label for="phone" class="field-title"> Телефон</label>
+              <input type="tel" id="phone" name="phone"  
+              class="field">
+              <svg class="form-icon" width="12px" height="12px">
+                <use  href="./img2/icons.svg#icon-tel"></use>
+               </svg>
+           </div>
+              
+           <div class="form-field">
+              <label for="email" class="field-title"> Почта</label>
+              <input type="email" id="email" name="email"  
+              class="field">
+              <svg class="form-icon" width="12px" height="12px">
+                <use  href="./img2/icons.svg#icon-envelope"></use>
+               </svg>
+           </div>
+  
+           <div class="form-textarea">
+              <label for="textarea" class="field-title"> Комментарий</label>
+              <textarea class="textarea"  type="textarea" rows="6"
+              id="textarea" name="textarea"  placeholder="Введите текст">
+              </textarea>
+           </div>
+  
+              <label class="form-checkbox">
+                <input type="checkbox" name="agreement" class="agreement-check" />
+                <span class="span-icon"></span>
+                Соглашаюсь с рассылкой и принимаю
+                <span class="span-link">
+                  <a href="" class="agreement-link">Условия договора</a>
+                </span>
+              </label>
+       
+              <button type="submit" class="submit">Отправить</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
