@@ -753,8 +753,11 @@ button:focus {
   border-radius: 4px;
 }
 
-.subscribe-button {
+.input-form:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
 
+.subscribe-button {
 color:var(--dark-bg-text-color);
 width: 200px;
 height: 50px;
@@ -913,7 +916,7 @@ transition: outline-color var(--transition-duration) var(--timing-function);
   }
   
 .form-checkbox {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -932,7 +935,7 @@ transition: outline-color var(--transition-duration) var(--timing-function);
 .agreement-check:checked + .span-icon {
 border-color: var(--accent-color);
 background-color: var(--accent-color);
-background-image:url('./img2/antenna.svg');
+background-image:url('../img2/icon-check.svg');
 background-size: contain;
 background-origin: border-box;
 
