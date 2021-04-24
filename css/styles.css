@@ -520,14 +520,14 @@ margin-bottom: 10px;
   background-color: #fff;
 }
 
-.projects .site-list {
+.site-list {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.button {
+.site-list__button {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -543,28 +543,24 @@ margin-bottom: 10px;
   box-shadow var(--transition-duration) var(--timing-function);
 }
 
-.button:hover,
-button:focus {
+.site-list__button:hover,
+.site-list__button:focus {
   background-color: var(--accent-color);
   color: var(--dark-bg-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.item-list:not(:last-child):not(:last-child) {
+.site-list__item:not(:last-child):not(:last-child) {
   margin-right: 8px;
 }
 
-.pro-item__title {
-  font-weight: 700;
-  color: var(--title-color);
-  letter-spacing: 0.06em;
-}
+
 
 
 
 /*Projects section*/
 
-.grid {
+.project {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -584,11 +580,18 @@ button:focus {
 
 
 .pro-item:hover,
-.pro-link:focus .pro-item {
+.pro-item:focus,
+.pro-item__link:focus .pro-item {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-img::before {
+.pro-item__title {
+  font-weight: 700;
+  color: var(--title-color);
+  letter-spacing: 0.06em;
+}
+
+.pro-item__img::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -598,13 +601,13 @@ button:focus {
   transition: transform var(--transition-duration) var(--timing-function);
 }
 
-.pro-item:hover .card-img::before,
-.pro-item:focus .card-img::before {
+.pro-item:hover .pro-item__img::before,
+.pro-item:focus .pro-item__img::before {
   opacity: 1;
   transform: translateY(0);
 }
 
-.card-img {
+.pro-item__img {
   position: relative;
   display:flex;
   align-items: center;
@@ -612,7 +615,7 @@ button:focus {
   overflow: hidden;
 }
 
-.card-text   {
+.pro-item__text   {  
   position: absolute;
   width: 322px;
   height: 168px;
@@ -624,13 +627,13 @@ button:focus {
   transition: transform var(--transition-duration) var(--timing-function);
 }
 
-.pro-item:hover .card-text {
+.pro-item:hover .pro-item__text {
   opacity: 1;
   transform: translateY(0);
 
 }
 
-.pro-name {
+.pro-item__name {
   padding: 20px 24px;
 }
 
