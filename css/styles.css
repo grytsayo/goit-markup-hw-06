@@ -19,6 +19,7 @@ body {
 }
 
 /*Utilities*/
+
 html {
   box-sizing: border-box;
 }
@@ -85,13 +86,21 @@ address {
   width: 1200px;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-color);
+}
+
 /* Social icons */
 
 .social-icons {
   display: inline-flex;
 }
 
-.social-icons-link {
+.social-icons__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,12 +112,12 @@ address {
   transition-timing-function:var(--timing-function);
 }
 
-.social-icons-link:hover,
-.social-icons-link:focus {
+.social-icons__link:hover,
+.social-icons__link:focus {
    background-color: var(--accent-color);
 }
 
-.social-icons-link .icon {
+.social-icons__icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
@@ -117,18 +126,18 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons-link:hover .icon,
-.social-icons-link:focus .icon {
+.social-icons__icon:hover,
+.social-icons__icon:focus {
   fill: #fff;
 }
 
-.social-icons-item + .social-icons-item {
+.social-icons__item + .social-icons__item {
   margin-left: 10px;
 }
 
 /*Header*/
 
-.container .header-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -138,43 +147,37 @@ address {
   height: 30px;
 }
 
-.header-text {
+.header-menu__text,
+.header-cont__text {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
 
-.cont-nav .header-text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
+.header-cont__text {
+ color: var(--main-text-color);
 }
 
-.cont-nav .icon {
-  fill: currentColor;
-}
-
-.header-text .cont-link {
+.header-menu__link,
+.header-cont__link {
   display: flex;
   align-items: center;
+  padding-top: 32px;
+  padding-bottom: 29px;
   transition-property: color;
   transition-duration:var(--transition-duration);
   transition-timing-function:var(--timing-function);
 }
 
-.cont-link:hover,
-.cont-link:focus {
+.header-menu__link:hover,
+.header-menu__link:focus,
+.header-cont__link:hover,
+.header-cont__link:focus {
     color: var(--accent-color);
 }
 
-.current:hover{
-    color: var(--accent-color);
-   
-}
-.current::after {
+.header--current::after {
     content:"";
     height: 4px;
     border-radius: 2px;
@@ -188,32 +191,32 @@ address {
 }
 
 
-.cont-link .icon {
+.header-cont__icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
-.pages-nav,
-.cont-nav {
+.header-menu,
+.header-cont {
   display: flex;
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: baseline;
+ }
 
-.pages-nav .item:first-child {
-  margin-left: 93px;
-}
-
-.cont-nav {
+ .header-cont {
   margin-left: auto;
 }
 
-.pages-nav .item:not(:last-child),
-.cont-nav .item:not(:last-child) {
-  margin-right: 50px;
+.header__item:first-child {
+  margin-left: 93px;
 }
 
-.pages-nav .link,
-.cont-nav .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.header__item:not(:last-child),
+.header__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header {
@@ -221,9 +224,7 @@ address {
   background-color: #fff;
 }
 
-
-
-.logo-start {
+.logostart {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -231,7 +232,7 @@ address {
   color: var(--accent-color);
 }
 
-.logo-end {
+.header__logoend {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -241,7 +242,7 @@ address {
 
 /*Hero*/
 
-.hero .hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -267,7 +268,7 @@ address {
   text-align: center;
 }
 
-.button-main {
+.hero__button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -284,21 +285,32 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-.button-main:hover,
-.button-main:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: #188ce8;
 }
 
 /*Our forces section*/
 
-.grid-0 {
+.advantages {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: 0;
 }
 
-.force {
+.forces__title {
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--title-color);
+margin-bottom: 10px;
+}
+
+
+.advantages__force {
   flex-basis: calc((100% - 30px * 4) / 4);
   margin-left: 30px;
   margin-top: 0;
@@ -310,14 +322,7 @@ address {
   background: #fff;
 }
 
-.forces-list {
-  font-size: 14px;
-  line-height: 1.71;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.f-icon0::before {
+.advantages__icon0::before {
   content: '';
   display: inline-block;
   width: 270px;
@@ -329,7 +334,7 @@ address {
   background-image: url(../img2/antenna.svg);
 }
 
-.f-icon1::before {
+.advantages__icon1::before {
   content: '';
   display: inline-block;
   width: 270px;
@@ -341,7 +346,7 @@ address {
   background-image: url(../img2/clock.svg);
 }
 
-.f-icon2::before {
+.advantages__icon2::before {
   content: '';
   display: inline-block;
   width: 270px;
@@ -353,7 +358,7 @@ address {
   background-image: url(../img2/diagram.svg);
 }
 
-.f-icon3::before {
+.advantages__icon3::before {
   content: '';
   display: inline-block;
   width: 270px;
@@ -367,26 +372,26 @@ address {
 
 /*We do section*/
 
-.we-do .menu-wedo {
-  display: flex;
-  margin-top: 50px;
-}
-
-.we-do {
+.wedo {
   padding-top: 94px;
   padding-bottom: 94px;
   background: #fff;
 }
 
-.work:not(:last-child) {
+.wedo-menu {
+  display: flex;
+  margin-top: 50px;
+}
+
+.wedo-menu__work:not(:last-child) {
   margin-right: 30px;
 }
 
-.work {
+.wedo-menu__work {
   position: relative;
 }
 
-.details {
+.wedo-menu__details {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -397,7 +402,7 @@ address {
   pointer-events: none
 }
 
-.details-header {
+.wedo-menu__header {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -408,20 +413,20 @@ address {
 
 /*Our team section*/
 
-.team {
+.team-section {
   padding-top: 94px;
   padding-bottom: 94px;
   background: var(--light-background);
 }
 
-.menu-team {
+.team {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: 0;
 }
 
-.team-mate {
+.team__mate {
   flex-basis: calc((100% - 30px * 4) / 4);
   margin-left: 30px;
   margin-top: 50px;
@@ -432,12 +437,12 @@ address {
   box-sizing: border-box;
 }
 
-.job-title {
+.team__position {
   margin-top: 10px;
   margin-bottom: 16px;
 }
 
-.mate {
+.team__info {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -449,12 +454,12 @@ address {
   line-height: 1.87;
 }
 
-.team-list {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
   text-align: center;
-  letter-spacing: 0.03em;
+  color: var(--title-color);
 }
 
 /* Our clients section */
@@ -464,17 +469,17 @@ address {
   padding-bottom: 94px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
 }
 
-.clients-item .icon {
+.clients__icon {
   fill: #afb1b8;
 }
 
-.clients-icon-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,20 +496,20 @@ address {
   transition-timing-function:var(--timing-function);
 }
 
-.clients-icon-link:hover,
-.clients-icon-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border: 1px solid var(--accent-color);
 }
 
-.clients-icon-link .icon {
+.clients__icon {
   transition-property: fill;
   transition-duration:var(--transition-duration);
   transition-timing-function:var(--timing-function);
 }
 
-.clients-icon-link:hover .icon,
-.clients-icon-link:focus .icon {
-fill: var(--accent-color);
+.clients__item:hover .clients__icon,
+.clients__item:focus .clients__icon {
+  fill: var(--accent-color);
 }
 
 /*Port nav*/
@@ -549,17 +554,13 @@ button:focus {
   margin-right: 8px;
 }
 
-.title {
+.pro-item__title {
   font-weight: 700;
   color: var(--title-color);
   letter-spacing: 0.06em;
 }
 
-.section-title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
+
 
 /*Projects section*/
 
@@ -655,7 +656,7 @@ button:focus {
   margin-bottom: 9px;
 }
 
-.logo-footer {
+.footer__logoend {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -958,10 +959,6 @@ background-origin: border-box;
     margin-left: 8.38px;
   }
 
-/* .checkbox-square {
-  margin-left: -8.38px;
-  fill: var(--title-color);
-} */
 
 .submit {
   font-weight: 700;
