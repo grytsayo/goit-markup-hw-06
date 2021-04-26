@@ -2,15 +2,16 @@
     display: flex;
     margin-top: 50px;
   }
-  
-  .wedo-menu__work:not(:last-child) {
-    margin-right: 30px;
-  }
-  
+
   .wedo-menu__work {
     position: relative;
-  }
   
+  
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
   .wedo-menu__details {
     position: absolute;
     bottom: 0;

@@ -5,15 +5,11 @@
     background-color: var(--dark-background);
   }
 
-  .footer-menu__address,
-.footer-menu__contacts:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .footer-menu__address {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  margin-bottom: 9px;
   color: var(--dark-bg-text-color);
 }
 
@@ -22,4 +18,8 @@
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+
+&:not(:last-child) {
+  margin-bottom: 9px;
+}
 }

@@ -6,8 +6,6 @@
   }
   
   
-  
-  
   .advantages__force {
     flex-basis: calc((100% - 30px * 4) / 4);
     margin-left: 30px;
@@ -40,16 +38,7 @@
     margin-top: -30px;
   }
   
-  .pro-item {
-    flex-basis: calc((100% - 30px * 3) / 3);
-    margin-left: 30px;
-    margin-top: 30px;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    box-sizing: border-box;
-    transition: box-shadow var(--transition-duration) var(--timing-function);
-  
-  }
+
 
   .footer-grid {
     display: flex;

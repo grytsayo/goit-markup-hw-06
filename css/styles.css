@@ -232,7 +232,7 @@ address {
   margin-bottom: 50px;
 }
 
-.site-list__item:not(:last-child):not(:last-child) {
+.site-list__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -252,8 +252,7 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-.hero__button:hover,
-.hero__button:focus {
+.hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
 }
 
@@ -272,8 +271,7 @@ address {
   transition: background-color var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function), box-shadow var(--transition-duration) var(--timing-function);
 }
 
-.site-list__button:hover,
-.site-list__button:focus {
+.site-list__button:hover, .site-list__button:focus {
   background-color: var(--accent-color);
   color: var(--dark-bg-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -326,8 +324,7 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-.social-icons__link:hover,
-.social-icons__link:focus {
+.social-icons__link:hover, .social-icons__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -340,8 +337,7 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons__icon:hover,
-.social-icons__icon:focus {
+.social-icons__icon:hover, .social-icons__icon:focus {
   fill: #fff;
 }
 
@@ -379,6 +375,10 @@ address {
   display: inline-flex;
 }
 
+.footer-socials__items:nth-child(n + 2) {
+  margin-left: 5px;
+}
+
 .footer-socials__link {
   display: flex;
   justify-content: center;
@@ -390,13 +390,8 @@ address {
   transition: background-color var(--transition-duration) var(--timing-function);
 }
 
-.footer-socials__link:hover,
-.footer-socials__link:focus {
+.footer-socials__link:hover, .footer-socials__link:focus {
   background-color: var(--accent-color);
-}
-
-.footer-socials__items:nth-child(n + 2) {
-  margin-left: 5px;
 }
 
 .header__logo {
@@ -557,8 +552,9 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-.header-menu__link:hover,
-.header-menu__link:focus,
+.header-menu__link:hover, .header-menu__link:focus, .header-menu__link:hover, .header-menu__link:focus,
+.header-cont__link:hover,
+.header-cont__link:focus,
 .header-cont__link:hover,
 .header-cont__link:focus {
   color: var(--accent-color);
@@ -581,8 +577,7 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -637,16 +632,6 @@ modal-form__.span-link {
   margin-top: -30px;
 }
 
-.pro-item {
-  flex-basis: calc((100% - 30px * 3) / 3);
-  margin-left: 30px;
-  margin-top: 30px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  transition: box-shadow var(--transition-duration) var(--timing-function);
-}
-
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
@@ -699,15 +684,11 @@ modal-form__.span-link {
   background-color: var(--dark-background);
 }
 
-.footer-menu__address,
-.footer-menu__contacts:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .footer-menu__address {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  margin-bottom: 9px;
   color: var(--dark-bg-text-color);
 }
 
@@ -716,6 +697,10 @@ modal-form__.span-link {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-menu__contacts:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .header--current::after {
@@ -840,14 +825,14 @@ modal-form__.span-link {
   margin-bottom: 28px;
 }
 
-.modal-form__input:focus + .form-icon {
-  fill: var(--accent-color);
-  transition: fill var(--transition-duration) var(--timing-function);
-}
-
 .modal-form__input:focus {
   outline-color: var(--accent-color);
   transition: outline-color var(--transition-duration) var(--timing-function);
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  fill: var(--accent-color);
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .modal-form__textarea {
@@ -905,8 +890,7 @@ modal-form__.span-link {
   transition-timing-function: var(--timing-function);
 }
 
-.modal-form__submit:hover,
-.modal-form__submit:focus {
+.modal-form__submit:hover, .modal-form__submit:focus {
   background-color: #188ce8;
 }
 
@@ -982,12 +966,12 @@ modal-form__.span-link {
   margin-top: 50px;
 }
 
-.wedo-menu__work:not(:last-child) {
-  margin-right: 30px;
-}
-
 .wedo-menu__work {
   position: relative;
+}
+
+.wedo-menu__work:not(:last-child) {
+  margin-right: 30px;
 }
 
 .wedo-menu__details {
@@ -1042,9 +1026,6 @@ modal-form__.span-link {
 
 .clients__icon {
   fill: #afb1b8;
-}
-
-.clients__icon {
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
@@ -1055,19 +1036,18 @@ modal-form__.span-link {
   fill: var(--accent-color);
 }
 
-.pro-item:hover,
-.pro-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.pro-item {
+  flex-basis: calc((100% - 30px * 3) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 
-.pro-item__img::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform var(--transition-duration) var(--timing-function);
+.pro-item:hover, .pro-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .pro-item:hover .pro-item__img::before,
@@ -1082,6 +1062,16 @@ modal-form__.span-link {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.pro-item__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--timing-function);
 }
 
 .pro-item__name {

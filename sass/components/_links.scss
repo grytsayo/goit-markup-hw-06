@@ -7,13 +7,14 @@
   transition-property: color;
   transition-duration:var(--transition-duration);
   transition-timing-function:var(--timing-function);
-}
 
-.header-menu__link:hover,
-.header-menu__link:focus,
-.header-cont__link:hover,
-.header-cont__link:focus {
+
+&:hover,
+&:focus,
+&:hover,
+&:focus {
     color: var(--accent-color);
+}
 }
 
 
@@ -32,12 +33,13 @@
     transition-property: border ;
     transition-duration:var(--transition-duration);
     transition-timing-function:var(--timing-function);
-  }
   
-  .clients__link:hover,
-  .clients__link:focus {
+  
+  &:hover,
+  &:focus {
     border: 1px solid var(--accent-color);
   }
+}
 
   .pro-item__link:focus .pro-item {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

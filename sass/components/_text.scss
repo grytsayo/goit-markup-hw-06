@@ -40,11 +40,12 @@
     border-radius: 4px;
     resize: none;
     transition: outline-color var(--transition-duration) var(--timing-function);
-  }
   
-  .modal-form__text:focus {
+  
+  &:focus {
     outline-color: var(--accent-color);
     transition: outline-color var(--transition-duration) var(--timing-function);
     }
+  }
 
     
